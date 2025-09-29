@@ -1,0 +1,21 @@
+.floor{
+    border: solid 1;
+}
+.floorName{
+    border: solid 1;
+    color: black;
+
+}
+.floorall{
+    display: flex;
+    position: relative;
+}
+.floorleft{
+    float: left;
+}
+.floorright{
+    float: right;
+}
+.floorContent{
+    margin: 4px;
+}

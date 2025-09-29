@@ -1,0 +1,93 @@
+.room{
+    background-color: rgba(224, 77, 77, 0.945);
+    text-align: center;
+    border: solid 1;
+    border-radius: 8px;
+    padding: 8px 0px;
+    width: 100px;
+    height: 130px;
+}
+.toilet{
+    border: solid 1;
+    border-radius: 8px;
+    padding: 8px 0px;
+    width: 70px;
+    height: 100px;
+}
+.stair{
+    border: solid 1;
+    border-radius: 8px;
+    padding: 8px 0px;
+    width: 70px;
+    height: 100px;
+}
+.eleveter{
+    border: solid 1;
+    border-radius: 8px;
+    padding: 8px 0px;
+    width: 70px;
+    height: 100px;
+}
+.road{
+    text-align: center;
+    border: solid 1;
+    border-radius: 8px;
+    padding: 8px 0px;
+    width: 100px;
+    height: 130px;
+}
+.roomEmpty{
+    background-color:lightblue;
+    text-align: center;
+    border: solid 1;
+    border-radius: 8px;
+    position:absolute;
+    padding: 8px 0px;
+    width: 100px;
+    height: 130px;
+}
+.roomname{
+    font-size: large;
+    text-align: center;
+    font-weight: 500;
+}
+.content{
+    font-size: small;
+    font-weight: 400;
+    margin-top: 15px;
+    opacity: 1;
+}
+.madal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.madalInner{
+    position: absolute;
+    top: 20%;
+    right: 0;
+    left: 0;
+    width: 240px;
+    padding-bottom: 20px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.madalHeader{
+    height: 8px;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 8px 8px 0 0;
+}
+.baseBtn{
+    font-size: smaller;
+    color: #0066ff;
+    width: 100%;
+    margin: 10px 0;
+    border: 0;
+    cursor: pointer;
+    opacity: 1;
+}
