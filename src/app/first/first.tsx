@@ -1,12 +1,15 @@
 import { RoomName } from "../components/room";
-import { Header } from "../components/header";
 import Toilet from "../components/toilet";
 import Stair from "../components/stairs";
 import Eleveter from "../components/eleveter";
 import Road from "../components/road";
 import styles from "./floor.module.css";
+import { getRoomInfo } from "@/server/action";
 
-export default function First() {
+export default async function First() {
+    const roomInfo = await getRoomInfo();
+    console.log(roomInfo);
+
     return (
         <div className={styles.floor}>
             <span className={styles.floorName}>講義棟一階</span>

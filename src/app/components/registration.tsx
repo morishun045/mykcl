@@ -4,7 +4,7 @@ import styles from "./Header.module.css"
 
 export function Registration(){
     return (
-        <div className={styles.registration}>
+        <div>
             学年登録
         </div>
     )

@@ -37,11 +37,10 @@
     height: 130px;
 }
 .roomEmpty{
-    background-color:lightblue;
+    background-color: rgba(148, 230, 255, 0.945);
     text-align: center;
     border: solid 1;
     border-radius: 8px;
-    position:absolute;
     padding: 8px 0px;
     width: 100px;
     height: 130px;
@@ -75,6 +74,7 @@
     margin: auto;
     background-color: #fff;
     border-radius: 8px;
+    z-index: 1000;
 }
 .madalHeader{
     height: 8px;

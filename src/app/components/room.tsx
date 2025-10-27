@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import styles from "./Room.module.css"
 
+
 type Room = {
     roomname: string;
     grade: string;
@@ -10,10 +11,12 @@ type Room = {
 }
 
 export function RoomName({ roomname, grade, detail }: Room) {
-    const [isRoomState, setRoomState] = useState(true);
+    const [isRoomState, setRoomState] = useState(false);
     const [showModal, setShowModal] = useState(false);
     let Content;
 
+
+    
     if (isRoomState) {
         Content = (
             <div className={styles.room}>

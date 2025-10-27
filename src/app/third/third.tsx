@@ -1,5 +1,4 @@
 import { RoomName } from "../components/room";
-import { Header } from "../components/header";
 import Toilet from "../components/toilet";
 import Stair from "../components/stairs";
 import Eleveter from "../components/eleveter";
@@ -7,6 +6,7 @@ import Road from "../components/road";
 import styles from "../first/floor.module.css";
 
 export default function Third() {
+    
     return (
         <div className={styles.floor}>
             <span className={styles.floorName}>講義棟三階</span>

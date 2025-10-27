@@ -1,5 +1,6 @@
 .floor{
     border: solid 1;
+    width: fit-content;
 }
 .floorName{
     border: solid 1;

@@ -3,6 +3,7 @@ import styles from "./Header.module.css";
 import Link from "next/link";
 import { Navigation } from "./navigation"
 import { Registration } from "./registration";
+import  NowTime  from "./actions/checker";
 
 type HeaderProps = {
     title: string;
@@ -22,8 +23,11 @@ export function Header({title}: HeaderProps){
                             <Navigation navilink="/forth" title="4階"/>
                             <Navigation navilink="/other" title="その他施設"/>
                         </div>
-                        <div>
+                        <div  className={styles.registration}>
                             <Registration />
+                        </div>
+                        <div className={styles.time}>
+                            <NowTime />
                         </div>
                     </li>
                 </ul>
