@@ -1,0 +1,26 @@
+.madal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.madalInner{
+    position: absolute;
+    top: 20%;
+    right: 0;
+    left: 0;
+    width: 240px;
+    padding-bottom: 20px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    z-index: 1000;
+}
+.madalHeader{
+    height: 8px;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 8px 8px 0 0;
+}
