@@ -1,5 +1,4 @@
 import { Header } from "@/app/components/header"
-import { RoomName } from "./components/room";
 import First from "./first/first";
 import Second from "./second/second";
 import Third from "./third/third";

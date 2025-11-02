@@ -2,15 +2,19 @@
 
 import React, { useState } from "react";
 import styles from "./Room.module.css"
+import Modal from "./roommodal";
 
-
-type Room = {
+type RoomDetail = {
     roomname: string;
     grade: string;
+    group: string;
     subject: string;
+    period: number;
+    start: number;
+    finish: number;
 }
 
-export function RoomName({ roomname, grade, subject }: Room) {
+export function RoomName({ roomname, grade, group, subject, period, start, finish }: RoomDetail) {
     const [isRoomState, setRoomState] = useState(false);
     let Content;
 
@@ -29,9 +33,16 @@ export function RoomName({ roomname, grade, subject }: Room) {
                             {subject}
                         </li>
                     </ul>
-                    <button onClick={() => setShowModal(true)} className={styles.baseBtn}>詳細を見る</button>
+                    <Modal roomname={roomname}
+                        grade={grade}
+                        group={group}
+                        subject={subject}
+                        period={period}
+                        start={start}
+                        finish={finish}>
+                    </Modal>
                 </div>
-            </div>
+            </div >
         );
     } else {
         Content = (
@@ -41,7 +52,14 @@ export function RoomName({ roomname, grade, subject }: Room) {
                 </h2>
                 <div className={styles.content}>
                     <span>空き教室</span>
-                    <button onClick={() => setShowModal(true)} className={styles.baseBtn}>詳細を見る</button>
+                    <Modal roomname={roomname}
+                        grade={grade}
+                        group={group}
+                        subject={subject}
+                        period={period}
+                        start={start}
+                        finish={finish}>
+                    </Modal>
                 </div>
             </div>
         );
