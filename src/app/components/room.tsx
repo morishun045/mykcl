@@ -1,24 +1,22 @@
 "use client"
 
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Room.module.css"
 import Modal from "./roommodal";
+import { RoomDetail } from "@/lib/types";
 
-type RoomDetail = {
+type RoomNameProps = {
     roomname: string;
-    grade: string;
-    group: string;
-    subject: string;
-    period: number;
-    start: number;
-    finish: number;
+    detail: RoomDetail | null;
 }
-
-export function RoomName({ roomname, grade, group, subject, period, start, finish }: RoomDetail) {
-    const [isRoomState, setRoomState] = useState(false);
+export function RoomName({ 
+    roomname, 
+    detail}: 
+    RoomNameProps)
+    {
     let Content;
 
-    if (isRoomState) {
+    if (detail) {
         Content = (
             <div className={styles.room}>
                 <h2 className={styles.roomname}>
@@ -27,19 +25,19 @@ export function RoomName({ roomname, grade, group, subject, period, start, finis
                 <div className={styles.content}>
                     <ul>
                         <li>
-                            {grade}
+                            {detail.grade}
                         </li>
                         <li>
-                            {subject}
+                            {detail.subject}
                         </li>
                     </ul>
                     <Modal roomname={roomname}
-                        grade={grade}
-                        group={group}
-                        subject={subject}
-                        period={period}
-                        start={start}
-                        finish={finish}>
+                        grade={detail.grade}
+                        group={detail.group}
+                        subject={detail.subject}
+                        period={detail.period}
+                        start={detail.start}
+                        end={detail.end}>
                     </Modal>
                 </div>
             </div >
@@ -53,12 +51,12 @@ export function RoomName({ roomname, grade, group, subject, period, start, finis
                 <div className={styles.content}>
                     <span>空き教室</span>
                     <Modal roomname={roomname}
-                        grade={grade}
-                        group={group}
-                        subject={subject}
-                        period={period}
-                        start={start}
-                        finish={finish}>
+                        grade=""
+                        group=""
+                        subject=""
+                        period={10}
+                        start=""
+                        end="">
                     </Modal>
                 </div>
             </div>
