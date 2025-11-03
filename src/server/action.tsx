@@ -47,10 +47,12 @@ export async function checkRoomsStatus(floorNumber: number, dateQuery: string): 
             .gte('time_period.end_time', queryTime)
 
         if (error) {
-            throw console.error("Supabase error:", error.message);
+            console.error("Supabase error:", error.message);
+            throw new Error(error.message);
         }
 
-
+        console.log("--- Supabase Raw Data (dbData) ---")
+        console.log(dbData);
 
 
         const details: RoomDetail[] = dbData.map(item => {
@@ -74,7 +76,10 @@ export async function checkRoomsStatus(floorNumber: number, dateQuery: string): 
 
             }
             return null;
+
         }).filter(Boolean) as RoomDetail[];
+        console.log("--- Formatted Details (details) ---")
+        console.log(details);
 
         return details;
 
