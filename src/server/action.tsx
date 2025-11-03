@@ -18,7 +18,7 @@ export async function getRoomInfo() {
     return schedules;
 }
 
-export async function checkRoomStatus(floorNumber: number, dateQuery: string): Promise<RoomDetail[]> {
+export async function checkRoomsStatus(floorNumber: number, dateQuery: string): Promise<RoomDetail[]> {
 
     if (!floorNumber || !dateQuery) {
         return [];
