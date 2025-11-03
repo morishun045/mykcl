@@ -1,16 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import styles from "./roommodal.module.css";
+import { RoomDetail } from "@/lib/types";
 
-type ModalProps = {
-    roomname: string;
-    grade: string;
-    group: string;
-    subject: string;
-    period: number;
-    start: number;
-    finish: number;
-}
 
 export default function Modal({
     roomname,
@@ -19,8 +11,8 @@ export default function Modal({
     subject,
     period,
     start,
-    finish
-}: ModalProps) {
+    end
+}: RoomDetail) {
     const [isOpenModal, setModalOpen] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
 
@@ -48,16 +40,16 @@ export default function Modal({
                 <div className={styles.content}>
                     <ul>
                         <li>
-                            {grade}
+                            学年:{grade}
                         </li>
                         <li>
-                            {group}
+                            クラス:{group}
                         </li>
                         <li>
-                            {subject}
+                            教科:{subject}
                         </li>
                         <li>
-                            {period}:{start}~{finish}
+                            時限:{period}:{start}~{end}
                         </li>
                     </ul>
                     <button onClick={toggleModal} className={styles.baseBtn}>戻る</button>
