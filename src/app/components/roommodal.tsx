@@ -40,16 +40,16 @@ export default function Modal({
                 <div className={styles.content}>
                     <ul>
                         <li>
-                            学年:{grade}
+                            学年：{grade}
                         </li>
                         <li>
-                            クラス:{group}
+                            クラス：{group}
                         </li>
                         <li>
-                            教科:{subject}
+                            教科：{subject}
                         </li>
                         <li>
-                            時限:{period}:{start}~{end}
+                            時限：{period}［{start}~{end}］
                         </li>
                     </ul>
                     <button onClick={toggleModal} className={styles.baseBtn}>戻る</button>

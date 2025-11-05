@@ -46,17 +46,17 @@ export default function First({ selectedDate }: FloorProps) {
     const detail1104 = isDetails.find(r => r.roomname === "1104講義室") || null;
     const detail2101 = isDetails.find(r => r.roomname === "2101講義室") || null;
     const detail2102 = isDetails.find(r => r.roomname === "2102講義室") || null;
-  
+
     return (
         <div className={styles.floor}>
             <span className={styles.floorName}>講義棟一階</span>
             <div className={styles.floorall}>
                 <div className={styles.floorleft}>
                     <div className={styles.floorContent}>
-                        <RoomName roomname="1101講義室" detail={detail1101} />
+                        <RoomName roomname="1102講義室" detail={detail1102} />
                     </div>
                     <div className={styles.floorContent}>
-                        <RoomName roomname="1102講義室" detail={detail1102} />
+                        <RoomName roomname="1101講義室" detail={detail1101} />
                     </div>
                     <div className={styles.floorContent}>
                         <Stair />
@@ -80,7 +80,7 @@ export default function First({ selectedDate }: FloorProps) {
                 </div>
                 <div className={styles.floorright}>
                     <div className={styles.floorContent}>
-                        <RoomName roomname="1103講義室" detail={detail1103} />
+                        <RoomName roomname="1104講義室" detail={detail1104} />
                     </div>
                     <div className={styles.floorContent}>
                         <Stair />
@@ -89,7 +89,7 @@ export default function First({ selectedDate }: FloorProps) {
                         <Road name="通路" />
                     </div>
                     <div className={styles.floorContent}>
-                        <RoomName roomname="1104講義室" detail={detail1104} />
+                        <RoomName roomname="1103講義室" detail={detail1103} />
                     </div>
                     <hr />
                     <div className={styles.floorContent}>

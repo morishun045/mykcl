@@ -51,7 +51,7 @@ export default function Forth({ selectedDate }: FloorProps) {
                 <div className={styles.floorall}>
                     <div className={styles.floorleft}>
                         <div className={styles.floorContent}>
-                            <RoomName roomname="1401講義室" detail={detail1401} />
+                            <RoomName roomname="1403講義室" detail={detail1403} />
                         </div>
                         <div className={styles.floorContent}>
                             <RoomName roomname="1402講義室" detail={detail1402} />
@@ -60,7 +60,7 @@ export default function Forth({ selectedDate }: FloorProps) {
                             <Stair />
                         </div>
                         <div className={styles.floorContent}>
-                            <RoomName roomname="1403講義室" detail={detail1403} />
+                            <RoomName roomname="1401講義室" detail={detail1401} />
                         </div>
                     </div>
                     <div className={styles.floorContent}>

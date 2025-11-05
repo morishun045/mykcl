@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Room.module.css";
-import Image from 'next/image'
+
 
 type RoadPops = {
     name: string

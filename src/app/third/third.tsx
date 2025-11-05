@@ -44,15 +44,15 @@ export default function Third({ selectedDate }: FloorProps) {
     const detail1303 = isDetails.find(r => r.roomname === "1303講義室") || null;
     const detail1304 = isDetails.find(r => r.roomname === "1304講義室") || null;
     const detail1305 = isDetails.find(r => r.roomname === "1305講義室") || null;
-    
-    
+
+
     return (
         <div className={styles.floor}>
             <span className={styles.floorName}>講義棟三階</span>
             <div className={styles.floorall}>
                 <div className={styles.floorleft}>
                     <div className={styles.floorContent}>
-                        <RoomName roomname="1301講義室" detail={detail1301} />
+                        <RoomName roomname="1303講義室" detail={detail1303} />
                     </div>
                     <div className={styles.floorContent}>
                         <RoomName roomname="1302講義室" detail={detail1302} />
@@ -61,7 +61,7 @@ export default function Third({ selectedDate }: FloorProps) {
                         <Stair />
                     </div>
                     <div className={styles.floorContent}>
-                        <RoomName roomname="1303講義室" detail={detail1303} />
+                        <RoomName roomname="1301講義室" detail={detail1301} />
                     </div>
                 </div>
                 <div className={styles.floorContent}>
@@ -72,13 +72,13 @@ export default function Third({ selectedDate }: FloorProps) {
                 </div>
                 <div className={styles.floorright}>
                     <div className={styles.floorContent}>
-                        <RoomName roomname="1304講義室" detail={detail1304} />
+                        <RoomName roomname="1305講義室" detail={detail1305} />
                     </div>
                     <div className={styles.floorContent}>
                         <Stair />
                     </div>
                     <div className={styles.floorContent}>
-                        <RoomName roomname="1305講義室" detail={detail1305} />
+                        <RoomName roomname="1304講義室" detail={detail1304} />
                     </div>
                 </div>
             </div>

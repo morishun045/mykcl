@@ -51,9 +51,19 @@
     font-weight: 500;
 }
 .content{
-    font-size: small;
+    font-size: 0.68rem;
+    text-align: left;
+    font-weight: 400;
+    margin-top: 8px;
+    margin-left: 10px;
+    opacity: 1;
+}
+.contentE{
+    font-size: 0.8rem;
+    text-align: center;
     font-weight: 400;
     margin-top: 15px;
+    margin-left: 10px;
     opacity: 1;
 }
 .baseBtn{

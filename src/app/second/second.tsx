@@ -52,16 +52,13 @@ export default function Second({ selectedDate }: FloorProps) {
             <div className={styles.floorall}>
                 <div className={styles.floorleft}>
                     <div className={styles.floorContent}>
-                        <RoomName roomname="1201講義室" detail={detail1201}/>
-                    </div>
-                    <div className={styles.floorContent}>
                         <RoomName roomname="1202講義室" detail={detail1202}/>
                     </div>
                     <div className={styles.floorContent}>
                         <Stair />
                     </div>
                     <div className={styles.floorContent}>
-                        <RoomName roomname="1203講義室" detail={detail1203}/>
+                        <RoomName roomname="1201講義室" detail={detail1201}/>
                     </div>
                 </div>
                 <div className={styles.floorContent}>
@@ -76,6 +73,9 @@ export default function Second({ selectedDate }: FloorProps) {
                     </div>
                     <div className={styles.floorContent}>
                         <Stair />
+                    </div>
+                    <div className={styles.floorContent}>
+                        <RoomName roomname="1203講義室" detail={detail1203}/>
                     </div>
                     <div className={styles.floorContent}>
                         <RoomName roomname="2201講義室" detail={detail2201}/>

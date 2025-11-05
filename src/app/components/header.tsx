@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Header.module.css";
-import Link from "next/link";
 import { Navigation } from "./navigation"
 import { Registration } from "./registration";
 import  NowTime  from "./actions/checker";

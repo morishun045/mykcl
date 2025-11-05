@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Toilet(){
     return (
         <div className={styles.toilet}>
-            <img src="/toilet.png" alt="toilet" />
+            <Image src="/toilet.png" alt="toilet" height={100} width={70} />
         </div>
     )
 }
