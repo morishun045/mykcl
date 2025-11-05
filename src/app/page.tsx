@@ -9,7 +9,8 @@ import Others from "./other/other";
 import styles from "./home.module.css"
 import { useCurrentTime } from "./components/actions/nowtime";
 
-const App = () => {
+export default function App(){
+
     const selectedDate = useCurrentTime();
 
     return (
@@ -25,5 +26,3 @@ const App = () => {
         </div>
     )
 };
-
-export default App;

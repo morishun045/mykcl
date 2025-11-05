@@ -39,6 +39,7 @@ export default function Others({ selectedDate }: FloorProps) {
     const detailsMILAiS = isDetails.find(r => r.roomname === "MILAiS") || null;
     const detailAV = isDetails.find(r => r.roomname === "AV講義室") || null;
     const detailbaseEx = isDetails.find(r => r.roomname === "基礎実験室") || null;
+    const detaildevice = isDetails.find(r => r.roomname === "端末講義室") || null;
 
     return (
         <div>
@@ -59,10 +60,18 @@ export default function Others({ selectedDate }: FloorProps) {
                 </div>
             </div>
             <div className={styles.floor}>
-                <span className={styles.floorName}>アゴラ</span>
+                <span className={styles.floorName}>基礎実験室</span>
                 <div className={styles.floorall}>
                     <div className={styles.floorContent}>
                      <RoomName roomname="基礎実験室" detail={detailbaseEx}/>
+                    </div>
+                </div>
+            </div>
+            <div className={styles.floor}>
+                <span className={styles.floorName}>端末講義室</span>
+                <div className={styles.floorall}>
+                    <div className={styles.floorContent}>
+                     <RoomName roomname="端末講義室" detail={detaildevice}/>
                     </div>
                 </div>
             </div>

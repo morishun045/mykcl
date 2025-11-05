@@ -25,10 +25,10 @@ export function RoomName({
                 <div className={styles.content}>
                     <ul>
                         <li>
-                            {detail.grade}
+                            学年：{detail.grade}
                         </li>
                         <li>
-                            {detail.subject}
+                            教科：{detail.subject}
                         </li>
                     </ul>
                     <Modal roomname={roomname}
@@ -48,13 +48,13 @@ export function RoomName({
                 <h2 className={styles.roomname}>
                     {roomname}
                 </h2>
-                <div className={styles.content}>
+                <div className={styles.contentE}>
                     <span>空き教室</span>
                     <Modal roomname={roomname}
                         grade=""
                         group=""
                         subject=""
-                        period={10}
+                        period={0}
                         start=""
                         end="">
                     </Modal>
