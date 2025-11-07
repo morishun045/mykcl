@@ -51,8 +51,8 @@ export async function checkRoomsStatus(floorNumber: number, dateQuery: string): 
             throw new Error(error.message);
         }
 
-        console.log("--- Supabase Raw Data (dbData) ---")
-        console.log(dbData);
+        // console.log("--- Supabase Raw Data (dbData) ---")
+        // console.log(dbData);
 
 
         const details: RoomDetail[] = dbData.map(item => {
