@@ -1,20 +1,22 @@
 "use client"
 
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Room.module.css"
+import Modal from "./roommodal";
+import { RoomDetail } from "@/lib/types";
 
-
-type Room = {
+type RoomNameProps = {
     roomname: string;
-    grade: string;
-    subject: string;
+    detail: RoomDetail | null;
 }
-
-export function RoomName({ roomname, grade, subject }: Room) {
-    const [isRoomState, setRoomState] = useState(false);
+export function RoomName({ 
+    roomname, 
+    detail}: 
+    RoomNameProps)
+    {
     let Content;
 
-    if (isRoomState) {
+    if (detail) {
         Content = (
             <div className={styles.room}>
                 <h2 className={styles.roomname}>
@@ -23,15 +25,22 @@ export function RoomName({ roomname, grade, subject }: Room) {
                 <div className={styles.content}>
                     <ul>
                         <li>
-                            {grade}
+                            学年：{detail.grade}
                         </li>
                         <li>
-                            {subject}
+                            教科：{detail.subject}
                         </li>
                     </ul>
-                    <button onClick={() => setShowModal(true)} className={styles.baseBtn}>詳細を見る</button>
+                    <Modal roomname={roomname}
+                        grade={detail.grade}
+                        group={detail.group}
+                        subject={detail.subject}
+                        period={detail.period}
+                        start={detail.start}
+                        end={detail.end}>
+                    </Modal>
                 </div>
-            </div>
+            </div >
         );
     } else {
         Content = (
@@ -39,9 +48,16 @@ export function RoomName({ roomname, grade, subject }: Room) {
                 <h2 className={styles.roomname}>
                     {roomname}
                 </h2>
-                <div className={styles.content}>
+                <div className={styles.contentE}>
                     <span>空き教室</span>
-                    <button onClick={() => setShowModal(true)} className={styles.baseBtn}>詳細を見る</button>
+                    <Modal roomname={roomname}
+                        grade=""
+                        group=""
+                        subject=""
+                        period={0}
+                        start=""
+                        end="">
+                    </Modal>
                 </div>
             </div>
         );

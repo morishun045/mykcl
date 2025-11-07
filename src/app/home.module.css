@@ -1,5 +1,7 @@
 .home {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 .base{
     width: 100%;

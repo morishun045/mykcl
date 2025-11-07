@@ -2,14 +2,13 @@
 
 import React from "react";
 import { useEffect, useState } from 'react'
-import styles from "../Header.module.css"
 
 type Props = {
   locale?: string
 }
 
 const NowTime = ({ locale = 'ja-JP' }: Props) => {
-  const [date, setDate] = useState(new Date())
+  const [date, setDate] = useState<Date | null>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -20,6 +19,11 @@ const NowTime = ({ locale = 'ja-JP' }: Props) => {
       clearInterval(timer)
     }
   }, [])
+  if (!date){
+    return (
+      <div>現在の日時:･･･ローディング中</div>
+    )
+  }
   return <div>現在の日時: {date.toLocaleString(locale)}</div>
 }
 export default NowTime;

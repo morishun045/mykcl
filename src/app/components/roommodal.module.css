@@ -5,7 +5,9 @@
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
+
 .madalInner{
     position: absolute;
     top: 20%;
@@ -16,11 +18,47 @@
     margin: auto;
     background-color: #fff;
     border-radius: 8px;
-    z-index: 1000;
+    z-index: 1001;
 }
+
 .madalHeader{
     height: 8px;
     width: 100%;
     margin-bottom: 30px;
     border-radius: 8px 8px 0 0;
 }
+
+.baseBtn{
+    font-size: smaller;
+    color: #0066ff;
+    width: 100%;
+    margin: 10px 0;
+    border: 0;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.roomname {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 20px 0;
+    padding: 0 16px
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 2rem;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.content li {
+    margin-bottom: 8px;
+}
+
+content li:last-child {
+    margin-bottom: 0;
+}
+
