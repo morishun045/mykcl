@@ -20,7 +20,7 @@ export function Header({title}: HeaderProps){
                             <Navigation navilink="/second" title="2階"/>
                             <Navigation navilink="/third" title="3階"/>
                             <Navigation navilink="/forth" title="4階"/>
-                            <Navigation navilink="/other" title="その他施設"/>
+                            <Navigation navilink="/other" title="その他"/>
                         </div>
                         <div  className={styles.registration}>
                             <Registration />
