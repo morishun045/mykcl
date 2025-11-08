@@ -1,6 +1,5 @@
 .header{
     height: 60px;
-
     background-color: rgba(34, 49, 52, 0.9);
     color: #fff;
 }
@@ -46,3 +45,57 @@
     float: right;
     padding: 0px 10px
 }
+
+@media (max-width: 620) {
+    
+    .header {
+        height: auto;
+        padding: 10px;
+    }
+
+    .title {
+        float: none;
+        text-align: center;
+        font: large;
+        margin: 0 10px;
+    }
+
+    .header :global(nav),
+    .header :global(ul),
+    .header :global(li) {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .registration {
+        display: none;
+    }
+
+    .time,
+    .headernav {
+        float: none;
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
+        position: static;
+    }
+
+    .time {
+        line-height: 30px;
+    }
+
+    .headernav :global(.navi) {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+        line-height: 30px;
+        padding: 0;
+        margin-bottom: 5px;
+    }
+}
+
